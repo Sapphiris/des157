@@ -1,0 +1,374 @@
+html {
+    scroll-behavior: smooth;
+}
+
+p,
+ul,
+li,
+a {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    color: #00aaff;
+}
+
+body {
+    max-width: 1200px;
+    min-width: 800px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 42, 64, 1) 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: Verdana;
+    color: #00aaff;
+    text-align: center;
+    margin: 10%;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    margin-bottom: 50px;
+}
+
+#name {
+    font-size: 52px;
+    text-transform: uppercase;
+    margin-top: 100px;
+}
+
+#desc {
+    text-transform: uppercase;
+}
+
+main {
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.divide {
+    display: block;
+    padding: 20px 40px 20px 40px;
+    border: 1px solid rgba(0, 170, 255, 0.25);
+    background-color: rgba(0, 170, 255, 0.1);
+    margin-bottom: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.divide h2 {
+    margin-bottom: 30px;
+}
+
+.divide ul li {
+    margin-bottom: 20px;
+}
+
+.divide ul li a:hover {
+    color: hotpink;
+}
+
+footer {
+    font-size: 12px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+
+}
+
+footer p a {
+    background-color: rgba(0, 0, 0, 0.25);
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 25px 50px 25px 50px;
+}
+
+footer p a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+/* Animations */
+
+#banner {
+    margin-right: auto;
+    margin-left: auto;
+    width: 800px;
+    height: 250px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.line {
+    width: 9%;
+    height: 0px;
+    background-color: #00aaff;
+    position: absolute;
+    bottom: 0;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+#line1 {
+    left: 0;
+    animation-name: line1animation;
+    animation-duration: 0.5s;
+}
+
+@keyframes line1animation {
+    0% {
+        height: 1%;
+    }
+
+    25% {
+        height: 0%;
+    }
+
+    50% {
+        height: 10%;
+    }
+
+    100% {
+        height: 1%;
+    }
+}
+
+#line2 {
+    left: 10%;
+    animation-name: line2animation;
+    animation-duration: 0.75s;
+}
+
+@keyframes line2animation {
+    0% {
+        height: 7%;
+    }
+
+    25% {
+        height: 2%;
+    }
+
+    50% {
+        height: 20%;
+    }
+
+    100% {
+        height: 7%;
+    }
+}
+
+#line3 {
+    left: 20%;
+    animation-name: line3animation;
+    animation-duration: 1.25s;
+}
+
+@keyframes line3animation {
+    0% {
+        height: 15%;
+    }
+
+    25% {
+        height: 5%;
+    }
+
+    50% {
+        height: 40%;
+    }
+
+    100% {
+        height: 15%;
+    }
+}
+
+#line4 {
+    left: 30%;
+    animation-name: line4animation;
+    animation-duration: 1s;
+}
+
+@keyframes line4animation {
+    0% {
+        height: 25%;
+    }
+
+    25% {
+        height: 10%;
+    }
+
+    50% {
+        height: 80%;
+    }
+
+    100% {
+        height: 25%;
+    }
+}
+
+#line5 {
+    left: 40%;
+    animation-name: line5animation;
+    animation-duration: 0.7s;
+}
+
+@keyframes line5animation {
+    0% {
+        height: 50%;
+    }
+
+    25% {
+        height: 25%;
+    }
+
+    50% {
+        height: 100%;
+    }
+
+    100% {
+        height: 50%;
+    }
+}
+
+#line6 {
+    left: 50%;
+    animation-name: line6animation;
+    animation-duration: 0.8s;
+}
+
+@keyframes line6animation {
+    0% {
+        height: 35%;
+    }
+
+    25% {
+        height: 15%;
+    }
+
+    50% {
+        height: 90%;
+    }
+
+    100% {
+        height: 35%;
+    }
+}
+
+#line7 {
+    left: 60%;
+    animation-name: line7animation;
+    animation-duration: 0.5s;
+}
+
+@keyframes line7animation {
+    0% {
+        height: 30%;
+    }
+
+    25% {
+        height: 15%;
+    }
+
+    50% {
+        height: 60%;
+    }
+
+    100% {
+        height: 30%;
+    }
+}
+
+#line8 {
+    left: 70%;
+    animation-name: line8animation;
+    animation-duration: 1.2s;
+}
+
+@keyframes line8animation {
+    0% {
+        height: 8%;
+    }
+
+    25% {
+        height: 3%;
+    }
+
+    50% {
+        height: 40%;
+    }
+
+    100% {
+        height: 8%;
+    }
+}
+
+#line9 {
+    left: 80%;
+    animation-name: line9animation;
+    animation-duration: 0.65s;
+}
+
+@keyframes line9animation {
+    0% {
+        height: 3%;
+    }
+
+    25% {
+        height: 1%;
+    }
+
+    50% {
+        height: 15%;
+    }
+
+    100% {
+        height: 3%;
+    }
+}
+
+#line10 {
+    left: 90%;
+    animation-name: line10animation;
+    animation-duration: 0.4s;
+}
+
+@keyframes line10animation {
+    0% {
+        height: 0%;
+    }
+
+    25% {
+        height: 0%;
+    }
+
+    50% {
+        height: 5%;
+    }
+
+    100% {
+        height: 0%;
+    }
+}
+
+#banner:hover {
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-name: banneranimation;
+    animation-duration: 2s;
+}
+
+@keyframes banneranimation {
+    10% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1.5);
+    }
+}
