@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Experimentation - Functions & DOM</title>
+
+    <style>
+        body {
+            font-family: Helvetica;
+            text-align: center;
+            margin-top: 200px;
+        }
+
+        button {
+            width: 150px;
+            height: 75px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>JS Experimentation - Functions & DOM</h1>
+    <h2>Number Guessing Game!</h2>
+    <button onclick="guessNumber()">Start!</button>
+
+    <article>
+        <p id="response"></p>
+        <p id="pity"></p>
+    </article>
+
+    <script>
+
+        /*
+        My program asks for your name and then tells you to click "start".
+        Upon clicking "start", a prompt shows, asking you to pick a number from 1-10.
+        If you guess correctly, it congratulates you.
+        If you guess incorrectly, it pities you.
+        If you don't guess, it tells you that you didn't guess.
+        You can click "Try Again" to guess again.
+        */
+
+        document.querySelector("#response").innerHTML = `Hello ${name()}! Click "Start"!</p>`
+
+        function name() {
+            var yourName = prompt("What is your name?", "");
+
+            if (!yourName) {
+                yourName = "Anonymous";
+            }
+
+            return yourName;
+        }
+
+        function guessNumber() {
+            var minNum = 1;
+            var maxNum = 10;
+            var randomNum = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+
+            var userGuess = prompt(`Guess a number from ${minNum} to ${maxNum}`, "");
+
+            if (!userGuess) {
+                document.querySelector("#response").innerHTML = "You didn't guess a number!"
+                document.querySelector("#pity").innerHTML = `<p></p>`
+            } else if (userGuess == randomNum) {
+                document.querySelector("#response").innerHTML = `<p>You answered ${userGuess}. That's correct! Congratulations!</p>`
+                document.querySelector("#pity").innerHTML = `<p></p>`
+            } else {
+                document.querySelector("#response").innerHTML =
+                    `<p>Sorry, that is incorrect. The answer was ${randomNum}.</p>`
+                document.querySelector("button").innerHTML = "<p>Try Again!</p>"
+                document.querySelector("#pity").innerHTML = `<p>${randomResponse()}</p>`
+            }
+        }
+
+        function randomResponse() {
+            var responseList = [
+                "Take a breather and try again!",
+                "Aww shucks, maybe next time!",
+                "Try using your psychic powers!",
+                "Try again! I believe in you!",
+                "You might get it next time!",
+                "Keep at it!",
+                "You'll get it eventually!"
+            ];
+
+            var randomResponseNum = responseList[Math.floor(Math.random() * responseList.length)];
+
+            return randomResponseNum;
+        }
+    </script>
+
+</body>
+
+</html>
