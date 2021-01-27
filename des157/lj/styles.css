@@ -71,7 +71,8 @@ article time {
 }
 
 article p {
-    margin-top: 20px;
+    margin-top: 25px;
+    line-height: 2em;
 }
 
 footer {

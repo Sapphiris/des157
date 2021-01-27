@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'wild_wordsroman';
+    src: url('wildwordsroman-webfont.woff2') format('woff2'),
+         url('wildwordsroman-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    font-family: 'wild_wordsroman';
+}
+
+input,
+label {
+    display: block;
+}
+
+input {
+    margin-bottom: 1em;
+}
+
+.articleCSS {
+    display: none;
+}
