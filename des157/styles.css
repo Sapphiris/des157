@@ -72,11 +72,13 @@ main {
 
 .divide ul li a:hover {
     color: hotpink;
+    cursor: pointer;
 }
 
 footer {
     font-size: 12px;
     margin-top: 100px;
+    margin-bottom: 50px;
     display: flex;
     justify-content: center;
 
@@ -91,6 +93,7 @@ footer p a {
 
 footer p a:hover {
     background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }
 
 

@@ -4,42 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Build Mad Lib Script</title>
-    <script src="script.js" defer></script>
+    <title>Madlib - Shoujo Manga Confessions</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <h1>Build a Mad Lib Script</h1>
+    <header class="startScreen">
+        <h2>Let's simulate a shoujo manga high school confession!</h2>
     </header>
 
     <main>
-        <div id="divForm" class="formCSS">
+        <div id="divForm" class="startScreen">
             <form id="myForm">
                 <label for="fName">Provide a female name.</label>
-                <input type="text" id="fName" required>
+                <input type="text" id="fName" placeholder="Stella" required>
 
                 <label for="mName">Provide a male name.</label>
-                <input type="text" id="mName" required>
+                <input type="text" id="mName" placeholder="Haru" required>
 
-                <label for="day">Pick a day of the week</label>
-                <input type="text" id="day" required>
+                <label for="day">Pick a day of the week.</label>
+                <input type="text" id="day" placeholder="Saturday" required>
 
                 <label for="food">What is your favorite food?</label>
-                <input type="text" id="food" required>
+                <input type="text" id="food" placeholder="Melon Pan" required>
 
                 <label for="timeOfDay">Provide a specific time.</label>
-                <input type="text" id="timeOfDay" required>
+                <input type="text" id="timeOfDay" placeholder="4:35pm" required>
 
                 <label for="location">What is your favorite location?</label>
-                <input type="text" id="location" required>
+                <input type="text" id="location" placeholder="Ameyoko Market" required>
 
-                <input type="submit" value="Send">
+                <input id="sendButton" type="submit" value="Send">
             </form>
         </div>
 
-        <div id="divArticle" class="articleCSS">
+        <div id="divArticle" class="mangaScreen">
             <article>
                 <p id="text0"></p>
                 <p id="text1"></p>
@@ -57,7 +58,11 @@
     </main>
 
     <footer>
-
+        <p><a
+                href="mailto:&#109;&#105;&#101;&#108;&#105;&#110;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;">Email
+                me!</a></p>
+        <p><a href="https://validator.w3.org/check?uri=referer">Valid HTML 5</a></p>
+        <p><a href="https://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a></p>
     </footer>
 </body>
 
