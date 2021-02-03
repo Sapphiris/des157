@@ -62,7 +62,7 @@ article {
 
 article h2 {
     font-size: 24px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 article time {
@@ -73,6 +73,10 @@ article time {
 article p {
     margin-top: 25px;
     line-height: 2em;
+}
+
+article p a:hover {
+    color: cyan;
 }
 
 footer {
