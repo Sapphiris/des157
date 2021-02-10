@@ -1,0 +1,97 @@
+html {
+    scroll-behavior: smooth;
+}
+
+p,
+ul,
+li,
+a {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    max-width: 1366px;
+    max-height: 768px;
+    background-color: black;
+    background-image: url(images/mainbg.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    margin: auto;
+    font-family: Helvetica;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.showing {
+    visibility: visible;
+    opacity: 1;
+}
+
+.overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transition-property: opacity, visibility;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    overflow: auto;
+}
+
+.overlay article {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 50px;
+    padding: 20px;
+    width: 800px;
+    height: 500px;
+    position: relative;
+    margin: auto;
+    margin-top: 100px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.close {
+    font-size: 36px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    color: white;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    outline: none;
+}
+
+main {
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+div {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+div img {
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+}
+
+div img:hover {
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
