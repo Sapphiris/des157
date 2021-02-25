@@ -3,21 +3,22 @@
     'use strict';
 
 
-    var startGame = document.getElementById('startgame');
-    var gameControl = document.getElementById('gamecontrol');
-    var game = document.getElementById('game');
-    var score1 = document.getElementById('score1');
-    var score2 = document.getElementById('score2');
-    var actionArea = document.getElementById('actions');
-    var hp1 = document.getElementById('hp1');
-    var hp2 = document.getElementById('hp2');
-    var pakichu = document.getElementById('pakichu');
-    var vivi = document.getElementById('vivi');
-    var pakichuSound = new Audio("media/pakichu_sound.mp3");
-    var viviSound = new Audio("media/vivi_sound.mp3");
-    var beep = new Audio("media/beep.mp3");
+    //creating variables
+    const startGame = document.getElementById('startgame');
+    const gameControl = document.getElementById('gamecontrol');
+    const game = document.getElementById('game');
+    const score1 = document.getElementById('score1');
+    const score2 = document.getElementById('score2');
+    const actionArea = document.getElementById('actions');
+    const hp1 = document.getElementById('hp1');
+    const hp2 = document.getElementById('hp2');
+    const pakichu = document.getElementById('pakichu');
+    const vivi = document.getElementById('vivi');
+    const pakichuSound = new Audio("media/pakichu_sound.mp3");
+    const viviSound = new Audio("media/vivi_sound.mp3");
+    const beep = new Audio("media/beep.mp3");
 
-    var gameData = {
+    const gameData = {
         dice: ['images/1die.png', 'images/2die.png', 'images/3die.png',
             'images/4die.png', 'images/5die.png', 'images/6die.png'
         ],
@@ -31,6 +32,7 @@
     };
 
 
+    //start game button
     startGame.addEventListener("click", function () {
         beep.play();
         gameData.index = Math.round(Math.random());
@@ -44,6 +46,7 @@
         setUpTurn();
     });
 
+    //setting up each turn
     function setUpTurn() {
         game.innerHTML = `<p>Roll the dice for the ${gameData.players[gameData.index]}</p>`;
         actionArea.innerHTML = '<button id="roll">Roll the Dice</button>';
@@ -53,6 +56,7 @@
         })
     }
 
+    //action of throwing dice, two dice numbers multiplied to create the sum of damage
     function throwDice() {
         actionArea.innerHTML = '';
         gameData.roll1 = Math.floor(Math.random() * 6) + 1;
@@ -76,6 +80,7 @@
 
     }
 
+    //checking if either players have won
     function checkWinningCondition() {
         gameData.index ? (gameData.index = 0) : gameData.index = 1;
         if (gameData.score[gameData.index] <= gameData.gameEnd) {
@@ -93,6 +98,7 @@
         }
     }
 
+    //shows HP, updates HP bar, and changes the images based on HP
     function showCurrentScore() {
 
         //player hp number change
