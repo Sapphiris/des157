@@ -1,0 +1,95 @@
+p,
+ul,
+li,
+a {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    color: #00aaff;
+}
+
+body {
+    max-width: 1366px;
+    min-width: 800px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 42, 64, 1) 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: Verdana;
+    color: #00aaff;
+    text-align: center;
+    margin: 5%;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+header h1 {
+    font-size: 52px;
+    text-transform: uppercase;
+}
+
+header h2 {
+    text-transform: uppercase;
+}
+
+main {
+    margin-right: 25%;
+    margin-left: 25%;
+    justify-content: center;
+    text-align: left;
+}
+
+article {
+    display: block;
+    padding: 30px 100px 50px 100px;
+    border: 1px solid rgba(0, 170, 255, 0.25);
+    background-color: rgba(0, 170, 255, 0.1);
+    margin-bottom: 5%;
+}
+
+article h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+article p {
+    margin-top: 25px;
+    line-height: 2em;
+}
+
+article p a {
+    text-decoration: underline;
+}
+
+article p a:hover {
+    color: cyan;
+}
+
+footer {
+    font-size: 12px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+
+}
+
+footer p a {
+    background-color: rgba(0, 0, 0, 0.25);
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 25px 50px 25px 50px;
+}
+
+footer p a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
