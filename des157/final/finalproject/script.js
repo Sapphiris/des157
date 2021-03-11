@@ -46,6 +46,8 @@
 
         name1Button.className = "editName hidden";
         name2Button.className = "editName hidden";
+        disableName1();
+        disablename2();
 
         setUpTurn();
     });
@@ -151,45 +153,47 @@
     let name1 = document.getElementById('name1');
     let name2 = document.getElementById('name2');
 
+    function disableName1() {
+        name1.setAttribute('readonly', '');
+        name1.style.backgroundColor = 'transparent';
+        gameData.players[0] = name1.value;
+        name1Button.className = 'editName hidden';
+    }
+
+    function disablename2() {
+        name2.setAttribute('readonly', '');
+        name2.style.backgroundColor = 'transparent';
+        gameData.players[1] = name2.value;
+        name2Button.className = 'editName hidden';
+    }
+
     name1Button.addEventListener('click', function () {
         if (name1.hasAttribute('readonly')) {
-            name1.removeAttribute('readonly')
-            name1.style.backgroundColor = 'white'
+            name1.removeAttribute('readonly');
+            name1.style.backgroundColor = 'white';
         } else {
-            name1.setAttribute('readonly', '')
-            name1.style.backgroundColor = 'transparent'
-            gameData.players[0] = name1.value
-            name1Button.className = 'editName hidden'
+            disableName1();
         }
     });
 
     name1.addEventListener('keydown', function (e) {
         if (e.key === 'Enter' && !name1.hasAttribute('readonly')) {
-            name1.setAttribute('readonly', '')
-            name1.style.backgroundColor = 'transparent'
-            gameData.players[0] = name1.value
-            name1Button.className = 'editName hidden'
+            disableName1();
         }
     });
 
     name2Button.addEventListener('click', function () {
         if (name2.hasAttribute('readonly')) {
-            name2.removeAttribute('readonly')
-            name2.style.backgroundColor = 'white'
+            name2.removeAttribute('readonly');
+            name2.style.backgroundColor = 'white';
         } else {
-            name2.setAttribute('readonly', '')
-            name2.style.backgroundColor = 'transparent'
-            gameData.players[1] = name2.value
-            name2Button.className = 'editName hidden'
+            disablename2();
         }
     });
 
     name2.addEventListener('keydown', function (e) {
         if (e.key === 'Enter' && !name2.hasAttribute('readonly')) {
-            name2.setAttribute('readonly', '')
-            name2.style.backgroundColor = 'transparent'
-            gameData.players[1] = name2.value
-            name2Button.className = 'editName hidden'
+            disablename2();
         }
     });
 
@@ -203,7 +207,7 @@
         startScreen.className = "overlay hidden";
         document.querySelector('footer').className = "showing";
         beep.play();
-        window.scrollTo(0,0);
+        window.scrollTo(0, 0);
     });
 
 
@@ -211,11 +215,11 @@
 
     const goBack = document.getElementById('goback');
 
-    goBack.addEventListener('click', function(){
+    goBack.addEventListener('click', function () {
         startScreen.className = "overlay showing";
         document.querySelector('footer').className = "hidden";
         beep.play();
-        window.scrollTo(0,0);
+        window.scrollTo(0, 0);
     })
 
     //font change
@@ -223,14 +227,14 @@
     const retroText = document.getElementById('retrotext');
     const dyslexiaText = document.getElementById('dyslexiatext');
 
-    retroText.addEventListener('click', function(){
+    retroText.addEventListener('click', function () {
         body.style.fontFamily = "vcr_osd_monoregular";
         retroText.style.boxShadow = "0 0 25px 10px #0ff";
         dyslexiaText.style.boxShadow = "none";
         beep.play();
     })
 
-    dyslexiaText.addEventListener('click', function(){
+    dyslexiaText.addEventListener('click', function () {
         body.style.fontFamily = "Verdana";
         dyslexiaText.style.boxShadow = "0 0 25px 10px #0ff";
         retroText.style.boxShadow = "none";
