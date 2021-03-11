@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paküman</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <main id="start-screen" class="overlay showing">
+        <article>
+            <img src="images/pakuman.png" alt="Pakuman" width="400px">
+            <h1>Hello!</h1>
+            <h3>Welcome to the world of Paküman!</h3>
+            <div id="start-message">
+                <button id="retrotext" class="font-buttons">Retro Mode</button>
+                <button id="dyslexiatext" class="font-buttons">Dyslexia Mode</button>
+                <p>
+                    We're all familiar with the creatures, "Pokemon", but what we're about to deal with are called
+                    "Paküman". You see, we live in an alternate universe, separate from the Pokemon universe. Based
+                    on Darwin's
+                    theory of evolution, creatures develop and mutate through natural selection in order to survive.
+                    Paküman are actually Pokemon, but with deformities that inhibit their survival. Scientists have
+                    devised a way to send these Paküman into our world, for them to prove their worthiness. Once
+                    worthy, they will be allowed to go back to the Pokemon world.
+                </p>
+                <br>
+                <h3>
+                    Your mission is to help prove which Paküman is worthy!
+                </h3>
+            </div>
+
+            <br><button id="closeOverlay">Gotcha</button>
+        </article>
+    </main>
+
+    <main>
+        <div id="left">
+            <button id="name1Button" class="editName">✎</button> <input type="text" id="name1" value="Pakichu"
+                readonly><br>
+            <img id="pakichu" src="images/pakichu.png" alt="Pakikchu" width="250px">
+            <div id="hp1" class="hp"></div>
+            <div id="score1" class="score">100 HP</div>
+        </div>
+
+        <div id="middle">
+            <img src="images/pakuman.png" alt="Pakuman" width="400px">
+
+            <div id="mainContent">
+                <div id="gamecontrol">
+                    <h2>Start Game!</h2>
+                    <button id="goback">↵ Go Back</button>
+                    <button id="startgame">Click to Start</button>
+                </div>
+
+                <div id="actions"></div>
+
+                <div id="game">
+                    <p>Battle it out! Players will roll the dice to inflict the multiplied number as damage upon the
+                        other
+                        player's Paküman! The first Paküman to faint with 0 HP loses!</p>
+                    <p id="ps">P.S. You can only change their names during this screen.</p>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div id="right">
+            <button id="name2Button" class="editName">✎</button> <input type="text" id="name2" value="Vivi"
+                readonly><br>
+            <img id="vivi" src="images/vivi.png" alt="Vivi" width="250px">
+            <div id="hp2" class="hp"></div>
+            <div id="score2" class="score">100 HP</div>
+        </div>
+    </main>
+
+    <footer class="hidden">
+        <p><a
+                href="mailto:&#109;&#105;&#101;&#108;&#105;&#110;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;">Email
+                me!</a></p>
+        <p><a href="https://validator.w3.org/check?uri=referer">Valid HTML 5</a></p>
+        <p><a href="https://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a></p>
+    </footer>
+
+</body>
+
+</html>
